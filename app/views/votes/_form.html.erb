@@ -1,0 +1,5 @@
+<%= form_for @votes do |f|%>
+<%= f.hidden_field :user_id %>
+<%= hidden_field_tag "vote[post_id]", post_id  %>
+<%= f.submit "Upvote" %>
+<% end %>

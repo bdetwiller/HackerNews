@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @post.save!
+    @post.save! # REV What id the save fails?
     redirect_to posts_url
   end
 

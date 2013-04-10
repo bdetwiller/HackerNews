@@ -29,7 +29,7 @@ module PostsHelper
     html = "<div class='indent_#{indent}'>#{comment.body} | <a href='/comments/#{comment.id}'>link</a></div>"
     # print comment with class indent-#{indent}
     if find_and_order_children(comment).empty?
-
+      # REV Why not do unless if you're not using the if bit?
     else
       find_and_order_children(comment).each do |sub_comment|
         html << print_comment_and_children(sub_comment, indent + 1)
